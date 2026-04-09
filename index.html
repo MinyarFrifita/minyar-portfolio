@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minyar Frifita — Software Engineering Student | AI & Data Engineering | Full Stack Developer | DevOps Enthusiast. Portfolio showcasing projects, skills, and experience.">
+    <meta name="keywords" content="Minyar Frifita, Software Engineer, AI, Data Engineering, Full Stack Developer, Portfolio, DevOps">
+    <meta name="author" content="Minyar Frifita">
+    <title>Minyar Frifita — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Animated background particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>MF<span class="logo-bracket"> /&gt;</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <a href="mailto:minyar.frifita@insat.ucar.tn" class="nav-cta">Let's Talk</a>
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#certifications" class="mobile-link">Certifications</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-in">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title animate-in">
+                Hi, I'm <span class="gradient-text">Minyar Frifita</span>
+            </h1>
+            <p class="hero-subtitle animate-in">
+                Software Engineering Student · <span class="highlight">AI / Data Engineering</span> · DevOps Enthusiast · Full Stack Developer
+            </p>
+            <p class="hero-description animate-in">
+                1st year Engineering student at <strong>INSAT</strong>, passionate about software development, 
+                information systems, and applied artificial intelligence. Building impactful solutions with modern technologies.
+            </p>
+            <div class="hero-buttons animate-in">
+                <a href="#projects" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Get in Touch
+                </a>
+            </div>
+            <div class="hero-stats animate-in">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-in">
+            <div class="hero-card">
+                <div class="card-header">
+                    <div class="card-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="card-title">portfolio.tsx</span>
+                </div>
+                <div class="card-code">
+                    <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Minyar Frifita"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"Full Stack Developer"</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-string">"React"</span>, <span class="code-string">"NestJS"</span>,
+    <span class="code-string">"FastAPI"</span>, <span class="code-string">"Docker"</span>,
+    <span class="code-string">"AI/ML"</span>, <span class="code-string">"DevOps"</span>
+  ],
+  <span class="code-prop">passion</span>: <span class="code-string">"Building the future"</span>,
+  <span class="code-prop">available</span>: <span class="code-bool">true</span>
+};</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01. About Me</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a <strong>1st year Software Engineering</strong> student at <strong>INSAT</strong> (National Institute of Applied Science and Technology), Tunis. My journey in tech is driven by a deep curiosity for <span class="highlight">AI, data engineering, and full-stack development</span>.</p>
+                    <p>I love building end-to-end solutions — from designing intuitive frontends to architecting robust backends, containerizing with Docker, and automating with CI/CD pipelines. I believe in the power of technology to solve real-world problems.</p>
+                    <p>When I'm not coding, you'll find me contributing to tech communities like <strong>IEEE</strong>, <strong>ACM</strong>, and <strong>JCI</strong>, or exploring the latest in AI research.</p>
+                </div>
+                <div class="about-info-cards">
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c6 3 6 3 12 0v-5"/></svg>
+                        </div>
+                        <div>
+                            <h4>Education</h4>
+                            <p>INSAT — Software Engineering</p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Tunis, Tunisia</p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        </div>
+                        <div>
+                            <h4>Languages</h4>
+                            <p>FR · EN · AR · DE</p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <h4>Communities</h4>
+                            <p>IEEE · ACM · JCI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02. Experience</span>
+                <h2 class="section-title">Professional Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Full Stack Developer Intern</h3>
+                                <p class="timeline-company">Ouerkema Innovation · Médinie, Tunisia</p>
+                            </div>
+                            <span class="timeline-date">06/2025 — 08/2025</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Developed a full-stack <strong>carpooling web application</strong></li>
+                            <li>Designed and implemented frontend &amp; backend architecture</li>
+                            <li>Built <strong>REST APIs</strong> with JWT authentication system</li>
+                            <li>Configured development environment with <strong>Docker &amp; Docker Compose</strong></li>
+                            <li>Used <strong>GitLab</strong> for version control and CI/CD pipelines</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Full Stack</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">GitLab CI/CD</span>
+                            <span class="tag">JWT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Sponsoring Manager — CODEQUEST</h3>
+                                <p class="timeline-company">ACM INSAT Club</p>
+                            </div>
+                            <span class="timeline-date">Ongoing</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Managing partnerships and sponsorships for the <strong>CODEQUEST</strong> event</li>
+                            <li>Coordinating with sponsors and managing external relationships</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Sponsoring</span>
+                            <span class="tag">Event Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03. Projects</span>
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-description">A selection of projects I've built, from AI-driven platforms to full-stack web applications.</p>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI / ML</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="wip">In Progress</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project: re-ba7.tn -->
+                <div class="project-card glass-card" data-category="ai fullstack wip">
+                    <div class="project-status wip">
+                        <span class="status-dot wip"></span> In Progress
+                    </div>
+                    <div class="project-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <h3 class="project-title">re-ba7.tn</h3>
+                    <p class="project-subtitle">AI-Powered Circular Economy Platform</p>
+                    <p class="project-description">Automatic damage detection + ML price estimation + semantic search + no-code workflows for sustainable economic practices.</p>
+                    <div class="project-tech">
+                        <span>Next.js</span><span>NestJS</span><span>FastAPI</span><span>YOLO</span><span>n8n</span><span>K3s</span>
+                    </div>
+                </div>
+
+                <!-- Project: SignTalk -->
+                <div class="project-card glass-card" data-category="ai wip">
+                    <div class="project-status wip">
+                        <span class="status-dot wip"></span> In Progress
+                    </div>
+                    <div class="project-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+                    </div>
+                    <h3 class="project-title">SignTalk</h3>
+                    <p class="project-subtitle">AI-Based Sign Language Recognition</p>
+                    <p class="project-description">Real-time sign language recognition &amp; translation using webcam. ML pipeline (KNN, RF, MLP) with MediaPipe landmarks achieving &gt;90% accuracy &lt;200ms latency.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>MediaPipe</span><span>OpenCV</span><span>scikit-learn</span><span>Flask</span><span>TFLite</span>
+                    </div>
+                </div>
+
+                <!-- Project: SymbioDrive -->
+                <div class="project-card glass-card" data-category="ai">
+                    <div class="project-status completed">
+                        <span class="status-dot completed"></span> Completed
+                    </div>
+                    <div class="project-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="project-title">SymbioDrive</h3>
+                    <p class="project-subtitle">AI-Driven Sustainable Mobility</p>
+                    <p class="project-description">AI system optimizing sustainable mobility solutions. ML models for route optimization and energy efficiency using mobility datasets.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>ML</span><span>Data Analysis</span><span>AI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/MinyarFrifita/SymbioDrive-InnovAI-INSAT" target="_blank" class="project-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project: DocGen -->
+                <div class="project-card glass-card" data-category="fullstack">
+                    <div class="project-status completed">
+                        <span class="status-dot completed"></span> Completed
+                    </div>
+                    <div class="project-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3 class="project-title">DocGen</h3>
+                    <p class="project-subtitle">Dynamic Document Generation Platform</p>
+                    <p class="project-description">Production-ready document generation with PDF generation, e-signature workflows, and an intelligent chatbot for document assistance.</p>
+                    <div class="project-tech">
+                        <span>Full Stack</span><span>PDF</span><span>E-Signature</span><span>Chatbot</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/MalekAzri/DocGen" target="_blank" class="project-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project: Carpooling App -->
+                <div class="project-card glass-card" data-category="fullstack">
+                    <div class="project-status completed">
+                        <span class="status-dot completed"></span> Completed
+                    </div>
+                    <div class="project-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <h3 class="project-title">Carpooling App</h3>
+                    <p class="project-subtitle">Internship Project — Full Stack</p>
+                    <p class="project-description">Full-stack carpooling web application with REST APIs, JWT authentication, Docker containerization and GitLab CI/CD pipeline.</p>
+                    <div class="project-tech">
+                        <span>REST API</span><span>JWT</span><span>Docker</span><span>GitLab CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- Project: E-commerce -->
+                <div class="project-card glass-card" data-category="fullstack">
+                    <div class="project-status completed">
+                        <span class="status-dot completed"></span> Completed
+                    </div>
+                    <div class="project-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    </div>
+                    <h3 class="project-title">E-Commerce Site</h3>
+                    <p class="project-subtitle">Academic Project</p>
+                    <p class="project-description">Full-featured e-commerce platform built as an academic project with complete frontend and backend implementation.</p>
+                    <div class="project-tech">
+                        <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/elaaG/site-e-commerce" target="_blank" class="project-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04. Skills</span>
+                <h2 class="section-title">Tech Stack</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3>Web Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">Symfony</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">NestJS</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">JWT Auth</span>
+                        <span class="skill-tag">ASP.NET</span>
+                        <span class="skill-tag">Symfony</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    </div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>DevOps & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Docker Compose</span>
+                        <span class="skill-tag">K3s</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">GitLab CI/CD</span>
+                        <span class="skill-tag">n8n</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.57-3.25 3.92A1 1 0 0 0 12 11v1"/><circle cx="12" cy="17" r="4"/><path d="M8 17h0"/><path d="M16 17h0"/><path d="M12 13v0"/><path d="M12 21v0"/></svg>
+                    </div>
+                    <h3>AI & ML Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">Google Colab</span>
+                        <span class="skill-tag">MediaPipe</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">YOLO</span>
+                        <span class="skill-tag">Roboflow</span>
+                        <span class="skill-tag">TFLite</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Teamwork</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">CRM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">05. Education</span>
+                <h2 class="section-title">Academic Background</h2>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card glass-card">
+                    <div class="edu-year">2023 — Present</div>
+                    <div class="edu-content">
+                        <div class="edu-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c6 3 6 3 12 0v-5"/></svg>
+                        </div>
+                        <h3>Engineering Degree — Software Engineering</h3>
+                        <p class="edu-school">INSAT · National Institute of Applied Science and Technology</p>
+                        <p class="edu-detail">1st year engineering cycle · Tunis, Tunisia</p>
+                        <div class="edu-badge">In Progress</div>
+                    </div>
+                </div>
+                <div class="edu-card glass-card">
+                    <div class="edu-year">2023</div>
+                    <div class="edu-content">
+                        <div class="edu-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                        </div>
+                        <h3>Baccalaureate — Mathematics</h3>
+                        <p class="edu-school">High School Diploma</p>
+                        <p class="edu-detail">Mention Très Bien (Highest Honors)</p>
+                        <div class="edu-badge success">Très Bien</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">06. Certifications</span>
+                <h2 class="section-title">Credentials & Awards</h2>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card glass-card">
+                    <div class="cert-provider">
+                        <span class="cert-provider-badge datacamp">DataCamp</span>
+                    </div>
+                    <h3>AI Engineer for Developers Associate</h3>
+                    <p>Certified AI Engineer with expertise in building AI-powered applications for developers.</p>
+                    <a href="https://www.datacamp.com/certificate/AIEDA0010295465657" target="_blank" class="cert-link">
+                        View Certificate
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+                <div class="cert-card glass-card">
+                    <div class="cert-provider">
+                        <span class="cert-provider-badge datacamp">DataCamp</span>
+                    </div>
+                    <h3>Associate Data Analyst</h3>
+                    <p>Certified in data analysis, statistical methods, and data visualization techniques.</p>
+                    <a href="https://www.datacamp.com/certificate/DAA0015488729043" target="_blank" class="cert-link">
+                        View Certificate
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+                <div class="cert-card glass-card">
+                    <div class="cert-provider">
+                        <span class="cert-provider-badge credly">Credly</span>
+                    </div>
+                    <h3>AI for Networking — Use Cases</h3>
+                    <p>AI applications in networking: automation, optimization, intelligent monitoring, and LLMs for network systems.</p>
+                    <a href="https://www.credly.com/badges/aad49c58-bc60-4272-a116-1018f91c3232/public_url" target="_blank" class="cert-link">
+                        View Badge
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">07. Contact</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-description">I'm always open to new opportunities, collaborations, and exciting projects. Feel free to reach out!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-cards">
+                    <a href="mailto:minyar.frifita@insat.ucar.tn" class="contact-card glass-card" id="contact-email">
+                        <div class="contact-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <h4>Email</h4>
+                        <p>minyar.frifita@insat.ucar.tn</p>
+                    </a>
+                    <a href="tel:+21654601749" class="contact-card glass-card" id="contact-phone">
+                        <div class="contact-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <h4>Phone</h4>
+                        <p>+216 54 601 749</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/minyar-frifita-2bb4ab319/" target="_blank" class="contact-card glass-card" id="contact-linkedin">
+                        <div class="contact-icon linkedin">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </div>
+                        <h4>LinkedIn</h4>
+                        <p>Minyar Frifita</p>
+                    </a>
+                    <a href="https://github.com/MinyarFrifita" target="_blank" class="contact-card glass-card" id="contact-github">
+                        <div class="contact-icon github">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        </div>
+                        <h4>GitHub</h4>
+                        <p>MinyarFrifita</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>MF<span class="logo-bracket"> /&gt;</span>
+                </a>
+                <p>Designed & Built by Minyar Frifita · 2025</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/minyar-frifita-2bb4ab319/" target="_blank" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://github.com/MinyarFrifita" target="_blank" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <a href="mailto:minyar.frifita@insat.ucar.tn" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
