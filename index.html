@@ -16,8 +16,8 @@
     <!-- Cursor glow effect -->
     <div class="cursor-glow" id="cursorGlow"></div>
 
-    <!-- Animated background particles -->
-    <canvas id="particleCanvas"></canvas>
+    <!-- Three.js 3D Background Canvas -->
+    <canvas id="three-canvas"></canvas>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -61,11 +61,11 @@
                 Hi, I'm <span class="gradient-text">Minyar Frifita</span>
             </h1>
             <p class="hero-subtitle animate-in">
-                Software Engineering Student · <span class="highlight">AI / Data Engineering</span> · DevOps Enthusiast · Full Stack Developer
+                Étudiante en Génie Logiciel — <span class="highlight">IA / Data Engineering</span> — DevOps Enthusiast — Développeuse Full Stack
             </p>
             <p class="hero-description animate-in">
-                1st year Engineering student at <strong>INSAT</strong>, passionate about software development, 
-                information systems, and applied artificial intelligence. Building impactful solutions with modern technologies.
+                Étudiante en 1ère année cycle ingénieur en <strong>Génie Logiciel à l’INSAT</strong>, passionnée par le développement logiciel et l'IA. 
+                Spécialisée en méthodologies <strong>Agiles (Scrum, Kanban)</strong> et explorant le domaine de l'<strong>Agentic AI</strong>.
             </p>
             <div class="hero-buttons animate-in">
                 <a href="#projects" class="btn btn-primary">
@@ -84,7 +84,7 @@
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
-                    <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                    <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
                     <span class="stat-label">Certifications</span>
                 </div>
                 <div class="stat-divider"></div>
@@ -95,6 +95,18 @@
             </div>
         </div>
         <div class="hero-visual animate-in">
+            <!-- Avatar with 3D glow ring -->
+            <div class="avatar-container">
+                <div class="avatar-glow"></div>
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring avatar-ring-2"></div>
+                <img src="avatar.png" alt="Minyar Frifita — Software Engineer" class="avatar-image" />
+                <div class="avatar-badge">
+                    <span class="badge-dot"></span>
+                    <span>Open to work</span>
+                </div>
+            </div>
+            <!-- Code card below avatar -->
             <div class="hero-card">
                 <div class="card-header">
                     <div class="card-dots">
@@ -130,9 +142,9 @@
             </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>I'm a <strong>1st year Software Engineering</strong> student at <strong>INSAT</strong> (National Institute of Applied Science and Technology), Tunis. My journey in tech is driven by a deep curiosity for <span class="highlight">AI, data engineering, and full-stack development</span>.</p>
-                    <p>I love building end-to-end solutions — from designing intuitive frontends to architecting robust backends, containerizing with Docker, and automating with CI/CD pipelines. I believe in the power of technology to solve real-world problems.</p>
-                    <p>When I'm not coding, you'll find me contributing to tech communities like <strong>IEEE</strong>, <strong>ACM</strong>, and <strong>JCI</strong>, or exploring the latest in AI research.</p>
+                    <p>Étudiante passionnée en <strong>Génie Logiciel</strong> à l’<strong>INSAT</strong>, je me spécialise dans les systèmes d’information et l’IA appliquée. Mon approche est guidée par les <span class="highlight">méthodologies Agiles</span> pour une collaboration efficace.</p>
+                    <p>Je m'intéresse particulièrement à l'<strong>Agentic AI</strong> et à l'automatisation intelligente des flux de travail. Mon objectif est de concevoir des solutions robustes, de l'architecture backend à l'expérience utilisateur, en passant par le DevOps avec <strong>Docker</strong> et les pipelines <strong>CI/CD</strong>.</p>
+                    <p>Active au sein des communautés <strong>IEEE</strong>, <strong>ACM</strong>, et <strong>JCI</strong>, je suis toujours à la recherche de nouveaux défis techniques pour repousser les limites de l'innovation logicielle.</p>
                 </div>
                 <div class="about-info-cards">
                     <div class="info-card glass-card">
@@ -167,7 +179,7 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
                         <div>
-                            <h4>Communities</h4>
+                            <h4>Affiliations</h4>
                             <p>IEEE · ACM · JCI</p>
                         </div>
                     </div>
@@ -198,11 +210,11 @@
                             <span class="timeline-date">06/2025 — 08/2025</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Developed a full-stack <strong>carpooling web application</strong></li>
-                            <li>Designed and implemented frontend &amp; backend architecture</li>
-                            <li>Built <strong>REST APIs</strong> with JWT authentication system</li>
-                            <li>Configured development environment with <strong>Docker &amp; Docker Compose</strong></li>
-                            <li>Used <strong>GitLab</strong> for version control and CI/CD pipelines</li>
+                            <li>Développement d’une application web de <strong>covoiturage</strong> (Full Stack)</li>
+                            <li>Conception frontend et backend et implémentation d’<strong>APIs REST</strong></li>
+                            <li>Gestion de l’authentification (JWT) et configuration <strong>Docker</strong></li>
+                            <li>Utilisation de <strong>GitLab</strong> pour le versioning et le <strong>CI/CD</strong></li>
+                            <li>Participation aux cérémonies <strong>Agile (Scrum)</strong> : daily meetings, sprint planning, rétrospectives</li>
                         </ul>
                         <div class="timeline-tags">
                             <span class="tag">Full Stack</span>
@@ -220,14 +232,15 @@
                     <div class="timeline-content glass-card">
                         <div class="timeline-header">
                             <div>
-                                <h3>Sponsoring Manager — CODEQUEST</h3>
-                                <p class="timeline-company">ACM INSAT Club</p>
+                                <h3>Responsable Sponsoring — CODEQUEST</h3>
+                                <p class="timeline-company">Club ACM INSAT</p>
                             </div>
-                            <span class="timeline-date">Ongoing</span>
+                            <span class="timeline-date">2023 — Présent</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Managing partnerships and sponsorships for the <strong>CODEQUEST</strong> event</li>
-                            <li>Coordinating with sponsors and managing external relationships</li>
+                            <li>Gestion des partenariats et du sponsoring pour l'événement <strong>CODEQUEST</strong></li>
+                            <li>Coordination avec les sponsors et gestion des relations externes</li>
+                            <li>Organisation des tâches selon une approche <strong>Agile</strong> adaptée à l'événementiel</li>
                         </ul>
                         <div class="timeline-tags">
                             <span class="tag">Leadership</span>
@@ -300,10 +313,10 @@
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
                     <h3 class="project-title">SymbioDrive</h3>
-                    <p class="project-subtitle">AI-Driven Sustainable Mobility</p>
-                    <p class="project-description">AI system optimizing sustainable mobility solutions. ML models for route optimization and energy efficiency using mobility datasets.</p>
+                    <p class="project-subtitle">Mobilité Durable Pilotée par l'IA</p>
+                    <p class="project-description">Conception d'un système d'IA pour l'optimisation d'itinéraires et l'efficacité énergétique. Analyse de datasets de mobilité et implémentation de modèles ML. Gestion Agile (Kanban, Sprints).</p>
                     <div class="project-tech">
-                        <span>Python</span><span>ML</span><span>Data Analysis</span><span>AI</span>
+                        <span>Python</span><span>Machine Learning</span><span>Agile (Kanban)</span><span>Data Analysis</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/MinyarFrifita/SymbioDrive-InnovAI-INSAT" target="_blank" class="project-link">
@@ -322,10 +335,10 @@
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                     </div>
                     <h3 class="project-title">DocGen</h3>
-                    <p class="project-subtitle">Dynamic Document Generation Platform</p>
-                    <p class="project-description">Production-ready document generation with PDF generation, e-signature workflows, and an intelligent chatbot for document assistance.</p>
+                    <p class="project-subtitle">Génération Dynamique de Documents</p>
+                    <p class="project-description">Plateforme de génération de PDF et flux de signature électronique. Intégration d'un chatbot intelligent et exploration de l'Agentic AI pour l'automatisation.</p>
                     <div class="project-tech">
-                        <span>Full Stack</span><span>PDF</span><span>E-Signature</span><span>Chatbot</span>
+                        <span>Full Stack</span><span>Agentic AI</span><span>PDF Logic</span><span>Chatbot</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/MalekAzri/DocGen" target="_blank" class="project-link">
@@ -343,11 +356,11 @@
                     <div class="project-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                     </div>
-                    <h3 class="project-title">Carpooling App</h3>
-                    <p class="project-subtitle">Internship Project — Full Stack</p>
-                    <p class="project-description">Full-stack carpooling web application with REST APIs, JWT authentication, Docker containerization and GitLab CI/CD pipeline.</p>
+                    <h3 class="project-title">Covoiturage App</h3>
+                    <p class="project-subtitle">Projet de Stage Full Stack</p>
+                    <p class="project-description">Développement d'une application de covoiturage avec APIs REST, authentification JWT, Docker et CI/CD. Organisation en sprints et user stories.</p>
                     <div class="project-tech">
-                        <span>REST API</span><span>JWT</span><span>Docker</span><span>GitLab CI/CD</span>
+                        <span>FastAPI / PHP</span><span>JWT</span><span>Docker</span><span>GitLab CI/CD</span>
                     </div>
                 </div>
 
@@ -359,11 +372,11 @@
                     <div class="project-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
                     </div>
-                    <h3 class="project-title">E-Commerce Site</h3>
-                    <p class="project-subtitle">Academic Project</p>
-                    <p class="project-description">Full-featured e-commerce platform built as an academic project with complete frontend and backend implementation.</p>
+                    <h3 class="project-title">Site E-Commerce</h3>
+                    <p class="project-subtitle">Projet Académique Agile</p>
+                    <p class="project-description">Plateforme e-commerce complète avec implémentation frontend et backend. Travail collaboratif avec revues de code régulières et méthodologie Agile.</p>
                     <div class="project-tech">
-                        <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+                        <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Agile</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/elaaG/site-e-commerce" target="_blank" class="project-link">
@@ -443,33 +456,56 @@
                         <span class="skill-tag">n8n</span>
                     </div>
                 </div>
-                <div class="skill-category glass-card">
+                <div class="skill-category glass-card skill-agentic">
                     <div class="skill-category-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.57-3.25 3.92A1 1 0 0 0 12 11v1"/><circle cx="12" cy="17" r="4"/><path d="M8 17h0"/><path d="M16 17h0"/><path d="M12 13v0"/><path d="M12 21v0"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 4.5 9.4 8 12 3.5-2.6 8-6.6 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
                     </div>
-                    <h3>AI & ML Tools</h3>
+                    <h3>Agentic AI (Débutante)</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Hugging Face</span>
-                        <span class="skill-tag">Google Colab</span>
-                        <span class="skill-tag">MediaPipe</span>
-                        <span class="skill-tag">OpenCV</span>
-                        <span class="skill-tag">scikit-learn</span>
-                        <span class="skill-tag">YOLO</span>
-                        <span class="skill-tag">Roboflow</span>
-                        <span class="skill-tag">TFLite</span>
+                        <span class="skill-tag skill-highlight">AutoGPT</span>
+                        <span class="skill-tag skill-highlight">LangChain</span>
+                        <span class="skill-tag skill-highlight">Agents Réactifs</span>
+                        <span class="skill-tag">Frameworks Agents</span>
                     </div>
                 </div>
                 <div class="skill-category glass-card">
                     <div class="skill-category-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/><path d="M12 6v6l4 2"/></svg>
                     </div>
-                    <h3>Soft Skills</h3>
+                    <h3>Méthodologies Agile</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Teamwork</span>
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Communication</span>
-                        <span class="skill-tag">Leadership</span>
-                        <span class="skill-tag">CRM</span>
+                        <span class="skill-tag">Scrum</span>
+                        <span class="skill-tag">Kanban</span>
+                        <span class="skill-tag">Daily Meetings</span>
+                        <span class="skill-tag">Sprint Planning</span>
+                        <span class="skill-tag">Retrospectives</span>
+                        <span class="skill-tag">Gestion de Backlog</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>CRM & Outils Business</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Concepts CRM</span>
+                        <span class="skill-tag">Relation Client</span>
+                        <span class="skill-tag">Sponsoring</span>
+                        <span class="skill-tag">Partenariats</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9-9c1.657 0 3 4.03 3 9s-1.343 9-3 9m0-18c-1.657 0-3 4.03-3 9s1.343 9 3 9"/></svg>
+                    </div>
+                    <h3>Outils d'IA</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ChatGPT</span>
+                        <span class="skill-tag">GitHub Copilot</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">Google Colab</span>
+                        <span class="skill-tag">Notion AI</span>
+                        <span class="skill-tag">Roboflow</span>
                     </div>
                 </div>
             </div>
@@ -520,6 +556,28 @@
                 <h2 class="section-title">Credentials & Awards</h2>
             </div>
             <div class="certs-grid">
+                <div class="cert-card glass-card">
+                    <div class="cert-provider">
+                        <span class="cert-provider-badge nvidia">NVIDIA</span>
+                    </div>
+                    <h3>Building RAG Agents with LLMs</h3>
+                    <p>Training on building and deploying Retrieval-Augmented Generation agents using Large Language Models.</p>
+                    <a href="https://learn.nvidia.com/certificates?id=fBR4AmAEQ0GPJCThff69bA#" target="_blank" class="cert-link">
+                        View Certificate
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+                <div class="cert-card glass-card">
+                    <div class="cert-provider">
+                        <span class="cert-provider-badge nvidia">NVIDIA</span>
+                    </div>
+                    <h3>Building LLM Applications With Prompt Engineering</h3>
+                    <p>Mastering prompt engineering techniques to build sophisticated applications with LLMs.</p>
+                    <a href="https://learn.nvidia.com/certificates?id=Ur0yxfw9T6uTyigbiSaz5Q" target="_blank" class="cert-link">
+                        View Certificate
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
                 <div class="cert-card glass-card">
                     <div class="cert-provider">
                         <span class="cert-provider-badge datacamp">DataCamp</span>
@@ -607,7 +665,8 @@
                 <a href="#hero" class="footer-logo">
                     <span class="logo-bracket">&lt;</span>MF<span class="logo-bracket"> /&gt;</span>
                 </a>
-                <p>Designed & Built by Minyar Frifita · 2025</p>
+                <p>Membre IEEE | Membre ACM | Membre JCI</p>
+                <p>Designed & Built by Minyar Frifita · 2026</p>
                 <div class="footer-socials">
                     <a href="https://www.linkedin.com/in/minyar-frifita-2bb4ab319/" target="_blank" aria-label="LinkedIn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -623,6 +682,16 @@
         </div>
     </footer>
 
+    <!-- Three.js Library (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Three.js Post-Processing -->
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+
+    <script src="three-scene.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
