@@ -236,4 +236,54 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(styleSheet);
+
+    // ===== JCI SPECIFICATIONS MODAL LOGIC =====
+    const jciModal = document.getElementById('jciModal');
+    const openJciModalBtn = document.getElementById('openJciModalBtn');
+    const closeJciModalBtn = document.getElementById('closeJciModalBtn');
+    const closeJciModalFooterBtn = document.getElementById('closeJciModalFooterBtn');
+
+    function openModal() {
+        if (!jciModal) return;
+        jciModal.classList.add('active');
+        jciModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        if (!jciModal) return;
+        jciModal.classList.remove('active');
+        jciModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (openJciModalBtn) {
+        openJciModalBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            openModal();
+        });
+    }
+
+    if (closeJciModalBtn) {
+        closeJciModalBtn.addEventListener('click', closeModal);
+    }
+
+    if (closeJciModalFooterBtn) {
+        closeJciModalFooterBtn.addEventListener('click', closeModal);
+    }
+
+    if (jciModal) {
+        jciModal.addEventListener('click', (e) => {
+            if (e.target === jciModal) {
+                closeModal();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && jciModal && jciModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 });
